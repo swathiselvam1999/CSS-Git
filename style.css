@@ -41,6 +41,7 @@ nav ul li {
 }
 
 nav a {
+    position :relative;
     text-decoration: none;
     color: #fff;
     transition: all .5s linear;
@@ -49,6 +50,20 @@ nav a:hover{
     color: skyblue;
     cursor: pointer;
 }
+
+a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; 
+    background-color: skyblue; 
+    transition: width 0.3s ease; 
+  }
+  a:hover::before {
+    width: 100%; 
+  }
 #home h2{
     margin-top: 4rem;
     font-size: 4rem;
